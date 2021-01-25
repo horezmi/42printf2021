@@ -58,6 +58,7 @@ void		ft_parse_and_print(t_parser *ptr)
 		{
 			if (*++STR != '%')
 			{
+				ft_init_struct_end(ptr);
 				ft_parse_flag(ptr);
 				ft_parse_type(ptr);
 				if (TYPE)
@@ -70,7 +71,6 @@ void		ft_parse_and_print(t_parser *ptr)
 		}
 		else
 			ft_putchar_fd(*STR, 1, ptr);
-		ft_init_struct_end(ptr);
 		STR++;
 	}
 	return ;
